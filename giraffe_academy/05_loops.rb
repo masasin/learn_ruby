@@ -13,7 +13,7 @@ for index in 1...5
 end
 
 lost_numbers = [4, 8, 15, 16, 23, 42]
-for number in lost_numbers 
+for number in lost_numbers
   puts number
 end
 
@@ -24,4 +24,3 @@ end
 lost_numbers.each do |number|
   puts number
 end
-
