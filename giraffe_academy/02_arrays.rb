@@ -3,6 +3,7 @@
 # Arrays
 numbers = [0, 1, 2, 3, 4, 5]
 p numbers
+p numbers[2, 4]  # Take 4 starting with 2
 p numbers[2..4]
 p numbers.length
 
