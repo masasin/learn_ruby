@@ -1,5 +1,6 @@
 class Ticket
   attr_reader :venue, :date
+  attr_accessor :full_price
 
   def initialize(venue)
     @venue = venue
@@ -15,16 +16,12 @@ class Ticket
     end
   end
 
-  def price=(amount)
-    if (amount * 100).to_i == amount * 100
-      @_original_price = amount.to_f
-    else
-      puts "The price seems to be malformed."
-    end
+  def price=(price)
+    @full_price = price
   end
 
   def price
-    @_original_price * (100 - @_discount) / 100.0
+    @full_price * (100 - @_discount) / 100.0
   end
 
   def discount=(percent)
