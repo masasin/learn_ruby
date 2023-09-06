@@ -4,7 +4,6 @@ class Ticket
 
   def initialize(venue)
     @venue = venue
-    @discount = 0
   end
 
   def date=(date)
@@ -21,7 +20,7 @@ class Ticket
   end
 
   def price
-    @full_price * (100 - @discount) / 100.0
+    @full_price * (100 - (@discount or 0)) / 100.0
   end
 end
 
